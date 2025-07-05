@@ -17,16 +17,29 @@
     </head>
     <body>
         <header>
-            <nav class="navbar">
+        <div class="logo">Fantástica</div>
+        <div class="hamburguer">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+            <nav class="nav-bar">
                 <ul>
-                    <li><a href="../index.html"><h3>Home</h3></a></li>
-                    <li><a href="../pages/ubicacion.html"><h3>Ubicación</h3></a></li>
-                    <li><a href="../pages/comprar.html"><h3>Comprar</h3></a></li>
-                    <li><a href="../pages/contacto.html"><h3>Contacto</h3></a></li>
-                    <li><a href="#" class="active"><h3>Moda</h3></a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/ubicacion.html">Ubicación</a></li>
+                    <li><a href="../pages/comprar.html">Comprar</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                    <li><a href="#" class="active">Moda</a></li>
                 </ul>
             </nav>
         </header>
+    <script>
+        hamburguer = document.querySelector(".hamburguer")
+        hamburguer.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active")
+        }
+    </script>
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button
