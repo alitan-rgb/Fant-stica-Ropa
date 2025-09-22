@@ -1,0 +1,57 @@
+@use "variables" as *;
+
+h1 {
+    text-align: center;
+    color: $color-claro;
+    font-style: italic;
+    font-size: $font-size-h1;
+
+    @media (max-width: 500px) {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: $font-size-h2;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #e0e0e0;
+    margin: 20px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: rgb(33, 25, 3);
+    font-family: $font-secundaria;
+    font-size: $font-size-h3;
+}
+
+.colorblack {
+    color: rgb(35, 20, 5);
+    font-size: $font-size-h2;
+    font-family: $font-secundaria;
+}
+.pregunta {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 60px;
+    opacity: 0;
+}
+.textochico {
+    font-size: $font-size-h3;
+    color: $color-texto;
+    font-family: $font-secundaria;
+    text-align: center;
+}
+
+.pregunta-confianza {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: rgb(190, 178, 160);
+    text-align: center;
+    margin-top: 60px;
+}

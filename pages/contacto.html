@@ -6,70 +6,77 @@
         <link rel="stylesheet" href="../css/style.css" />
         <title>CONTACTO</title>
     </head>
-        <header>
+    <header>
         <div class="logo">Fantástica</div>
         <div class="hamburguer">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../pages/ubicacion.html">Ubicación</a></li>
-                    <li><a href="../pages/comprar.html">Comprar</a></li>
-                    <li><a href="#" class="active">Contacto</a></li>
-                    <li><a href="../pages/moda.html">Moda</a></li>
-                </ul>
-            </nav>
-        </header>
-    <body>
-        <br />
-        <h1 class="title">CONTÁCTANOS</h1>
-        <br />
-        <p class="textochico">
-            Sabemos que es muy importante comunicarnos con nuestros clientes,
-            por esto decidimos crear un contacto, en el que deberas seleccionar
-            de que parte del mundo eres y dejarnos tu correo electronico donde
-            te llegara un mensaje automatico.
-        </p>
-        <br />
-        <section id="contactanos">
-            <br />
-            <h2 class="Subtitulosizquierda">
-                Links de Nuestras Redes Sociales
-            </h2>
-            <br />
-            <ul class="Redes">
-                <li>
-                    <a href="https://wa.me/54999123456"> Whatsapp </a>
-                    <a href="https://www.instagram.com/"> Instagram </a>
-                </li>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/ubicacion.html">Ubicación</a></li>
+                <li><a href="../pages/comprar.html">Comprar</a></li>
+                <li><a href="#" class="active">Contacto</a></li>
+                <li><a href="../pages/moda.html">Moda</a></li>
             </ul>
+        </nav>
+    </header>
+    <script>
+  const hamburguer = document.querySelector(".hamburguer");
+  hamburguer.onclick = function () {
+    const navBar = document.querySelector(".nav-bar");
+    navBar.classList.toggle("active");
+  };
+</script>
+    <body>
+        <section class="intro-contacto">
+            <h2>CONTÁCTANOS</h2>
+            <h3>
+                Sabemos que es muy importante comunicarnos con nuestros
+                clientes, por esto decidimos crear un contacto, en el que
+                deberás seleccionar de qué parte del mundo eres y dejarnos tu
+                correo electrónico donde te llegará un mensaje automático.
+            </h3>
         </section>
-        <br />
-        <h2 class="Subtitulosizquierda">Contactate con Nosotros</h2>
-        <br />
-        <form action="submit" method="post">
-            <label for="Correo electronico">
-                Correo electronico:<input type="text" />
-            </label>
-            <label for="continente"> Continente: </label>
-            <select name="continente" id="continente">
-                <option value="">America</option>
-                <option value="">Europa</option>
-                <option value="">Asia</option>
-                <option value="">Africa</option>
-                <option value="">Oceania</option>
-            </select>
-        </form>
-        <br />
-        <input type="submit" value="Enviar" />
-        <br />
-        <br />
-        <br />
+
+        <div class="contacto">
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" />
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" />
+
+                <label for="continente">Continente</label>
+                <select id="continente" name="continente">
+                    <option value="america">América</option>
+                    <option value="europa">Europa</option>
+                    <option value="asia">Asia</option>
+                </select>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <section id="contactanos">
+            <h2>
+                Nuestras Redes Sociales
+            </h2>
+            <div class="redes">
+                <a href="https://wa.me/54999123456" target="_blank">
+                    <img src="../images/whatsapp.png" alt="WhatsApp" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="../images/instagram.png" alt="Instagram" />
+                </a>
+            </div>
+        </section>
     </body>
-    <footer>
-        <h5 class="footer">© 2025 Fantastica moda</h5>
+    <footer class="footer">
+        <h4>© 2025 Fantastica moda</h4>
     </footer>
 </html>

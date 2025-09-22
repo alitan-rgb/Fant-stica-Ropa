@@ -1,0 +1,22 @@
+{
+  "name": "documentos-html-paginas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alitan-rgb/Fant-stica-Ropa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alitan-rgb/Fant-stica-Ropa/issues"
+  },
+  "homepage": "https://github.com/alitan-rgb/Fant-stica-Ropa#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.92.1"
+  }
+}

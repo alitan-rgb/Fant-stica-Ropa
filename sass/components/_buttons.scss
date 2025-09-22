@@ -1,0 +1,9 @@
+@use "../base/variables" as *;
+
+button {
+    padding: 10px;
+    background-color: $color-header;
+    color: $color-hover;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+@use "../base/variables" as *;
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 40px;
+    padding: 20px 0;
+    width: 100%;
+    opacity: 0.9;
+}

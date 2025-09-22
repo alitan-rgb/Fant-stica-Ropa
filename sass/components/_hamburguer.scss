@@ -1,0 +1,18 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.hamburguer {
+    display: none;
+
+    @media (max-width: 900px) {
+        display: block;
+        cursor: pointer;
+
+        .line {
+            width: 30px;
+            height: 3px;
+            background-color: $color-hover;
+            margin: 6px 0;
+        }
+    }
+}

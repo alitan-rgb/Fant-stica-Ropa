@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="css/style.css" />
+        <meta name="description" content="Arreglos y confecciones de ropa">
+        <meta name="keywords" content="ropa, arreglos, confecciones, prendas, accsesorios, telas, argentina, ">
         <title>Fantastica "Home"</title>
     </head>
     <body>
@@ -18,7 +21,7 @@
         </div>
             <nav class="nav-bar">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#" class="nav active">Home</a></li>
                     <li><a href="pages/ubicacion.html">Ubicación</a></li>
                     <li><a href="pages/comprar.html">Comprar</a></li>
                     <li><a href="pages/contacto.html">Contacto</a></li>
@@ -43,19 +46,34 @@
     </h3></div>
 </div>
 
-        <h2>
-            ¿Por que deberias confiar en
-            <span class="colorblack">Fantástica</span>?
-        </h2>
+<h2 class="pregunta animate__animated">¿Por qué deberías confiar en <span class="colorblack">fantástica</span>?</h2>
+<script>
+const pregunta = document.querySelector('.pregunta');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        pregunta.classList.add('animate__fadeInDown', 'animate__slow');
+        pregunta.style.opacity = 1;
+        observer.unobserve(pregunta); 
+    }
+    });
+}, {
+    threshold: 0.5 
+});
+
+observer.observe(pregunta);
+</script>
         <h3>
             Porque somos un local con mas de 25 años de experiencia y nuestros
             clientes nos avalan. Nuestra amable atención y respeto es nuestro sello.
         </h3>
-        <div class="contenedorimgindex">
-            <img src="images/cociendoindex.png" alt="cociendoindex" />
+        <div>
+            <img src="images/cociendoindex.png" alt="Costura en proceso" class="imagen-costura" />
+
         </div>
-            <footer>
-                <h5 class="footer">© 2025 Fantastica moda</h5>
-            </footer>
+        <footer class="footer">
+            <h4>© 2025 Fantastica moda</h4>
+        </footer>
     </body>
 </html>

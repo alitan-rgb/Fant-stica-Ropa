@@ -1,0 +1,56 @@
+@use "../base/variables" as *;
+@use '../base/mixins' as *;
+
+.nav-bar {
+    ul {
+        display: flex;
+        li {
+            a {
+                display: block;
+                color: $color-hover;
+                font-size: 20px;
+                padding: 10px 25px;
+                border-radius: 50px;
+                @include transition;
+                margin: 0 5px;
+                &:hover,
+                &.active {
+                    color: $color-header;
+                    background-color: $color-hover;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: $color-header;
+        @include transition;
+        overflow: hidden;
+        &.active {
+            height: 450px;
+            ul {
+                opacity: 1;
+            }
+        }
+        ul {
+            display: block;
+            width: fit-content;
+            margin: 80px auto 0 auto;
+            text-align: center;
+            @include transition(0.5s);
+            opacity: 0;
+            li {
+                a {
+                    margin-bottom: 12px;
+                    color: $color-hover;
+                }
+            }
+        }
+    }
+}

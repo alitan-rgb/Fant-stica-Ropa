@@ -1,0 +1,17 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin responsive-text($size) {
+    font-size: $size;
+
+    @media (max-width: 500px) {
+        font-size: $size - 10px;
+    }
+}
+
+@mixin transition($time: 0.3s) {
+    transition: all $time ease-in-out;
+}

@@ -24,88 +24,67 @@
                 </ul>
             </nav>
         </header>
+        <script>
+  const hamburguer = document.querySelector(".hamburguer");
+  hamburguer.onclick = function () {
+    const navBar = document.querySelector(".nav-bar");
+    navBar.classList.toggle("active");
+  };
+</script>
 <body>
-    <section class="comprarbox">
-        <h3>
-            Vestido Largo Canelado Manga Corta
-        </h3>
-        <div class="contenedorimgindex">
-            <img src="../images/1021011558C1002-L1_720x.webp" alt="">
-        </div>
-        <form action="submit" method="post">
-        <label for="talle">
-            Talle:
-        </label>
-        <select name="talle" id="talle">
-            <option value="">
-                XS
-            </option>
-            <option value="">
-                S
-            </option>
-            <option value="">
-                M
-            </option>
-            <option value="">
-                L
-            </option>
-            <option value="">
-                XL
-            </option>
-        </select>
-        <label for="color">Color:</label>
-        <select name="colores" id="colores">
-            <option value="">
-                Negro
-            </option>
-        </select>
-
-    <input type="submit" value="COMPRAR">
-    <h3>
-        Vestido Informal Corto Color Sólido
-    </h3>
-    <div class="contenedorimgindex">
-        <img src="../images/ea7fd9510d9d4c5087c389591cba46b5.webp" alt="">
+<div class="contenedor-product-box">
+  <section class="producto-box">
+    <h3>Vestido Largo Canelado Manga Corta</h3>
+    <div class="contenedorimgcompra">
+      <img src="../images/1021011558C1002-L1_720x.webp" alt="Vestido largo" />
     </div>
     <form action="/submit" method="post">
-    <label for="talle">
-        Talle:
-    </label>
-        <select name="talle" id="talle">
-            <option value="">
-                XS
-            </option>
-            <option value="">
-                S
-            </option>
-            <option value="">
-                M
-            </option>
-            <option value="">
-                L
-            </option>
-            <option value="">
-                XL
-            </option>
-        </select>
-    <label for="color">
-        Color:
-    </label>
-        <select name="colores" id="colores">
-            <option value="">
-                Negro
-            </option>
-            <option value="">
-                Blanco
-            </option>
-            <option value="">
-                Azul Marino
-            </option>
-        </select>
-    <input type="submit" value="COMPRAR">
-    </section>
+      <label for="talle1">Talle:</label>
+      <select name="talle" id="talle1">
+        <option value="">XS</option>
+        <option value="">S</option>
+        <option value="">M</option>
+        <option value="">L</option>
+        <option value="">XL</option>
+      </select>
+
+      <label for="color1">Color:</label>
+      <select name="color" id="color1">
+        <option value="">Negro</option>
+      </select>
+
+      <input type="submit" value="COMPRAR" />
+    </form>
+  </section>
+  <section class="producto-box">
+    <h3>Vestido Informal Corto Color Sólido</h3>
+    <div class="contenedorimgcompra">
+      <img src="../images/ea7fd9510d9d4c5087c389591cba46b5.webp" alt="Vestido informal" />
+    </div>
+    <form action="/submit" method="post">
+      <label for="talle2">Talle:</label>
+      <select name="talle" id="talle2">
+        <option value="">XS</option>
+        <option value="">S</option>
+        <option value="">M</option>
+        <option value="">L</option>
+        <option value="">XL</option>
+      </select>
+
+      <label for="color2">Color:</label>
+      <select name="color" id="color2">
+        <option value="">Negro</option>
+        <option value="">Blanco</option>
+        <option value="">Azul Marino</option>
+      </select>
+
+      <input type="submit" value="COMPRAR" />
+    </form>
+  </section>
+</div>
+
 </body>
-<footer>
-    <h5 class="footer">© 2025 Fantastica moda</h5>
+<footer class="footer">
+    <h4>© 2025 Fantastica moda</h4>
 </footer>
 </html>
