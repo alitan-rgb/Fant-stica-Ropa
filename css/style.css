@@ -236,6 +236,18 @@ header {
   text-decoration: none;
 }
 
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.background-wrapper {
+  width: 100%;
+  background-color: #5c524d;
+}
+
 .hamburguer {
   display: none;
 }
@@ -542,6 +554,22 @@ form button:hover {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.info-box {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+.info-box.visible {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .info-titulo {
