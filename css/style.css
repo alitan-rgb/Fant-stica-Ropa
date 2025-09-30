@@ -179,11 +179,48 @@ header {
   margin-bottom: 50px;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 20;
+}
+.hamburguer .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
 .nav-bar ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .nav-bar ul li a {
   display: block;
+  text-decoration: none;
   color: white;
   font-size: 20px;
   padding: 10px 25px;
@@ -214,12 +251,14 @@ header {
     opacity: 1;
   }
   .nav-bar ul {
-    display: block;
-    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin: 80px auto 0 auto;
     text-align: center;
-    transition: all 0.5s ease-in-out;
     opacity: 0;
+    transition: all 0.5s ease-in-out;
   }
   .nav-bar ul li a {
     margin-bottom: 12px;
@@ -227,15 +266,14 @@ header {
   }
 }
 
-.nav-bar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+@media (max-width: 900px) {
+  .hamburguer {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 }
-.nav-bar ul li a {
-  text-decoration: none;
-}
-
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -305,6 +343,29 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.carrito-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+.carrito-flotante:hover {
+  background-color: rgb(229.5, 229.5, 229.5);
 }
 
 body {
@@ -444,6 +505,29 @@ form button:hover {
 }
 #contactanos .redes a img:hover {
   transform: scale(1.1);
+}
+
+.llamada-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+.llamada-flotante:hover {
+  background-color: rgb(229.5, 229.5, 229.5);
 }
 
 .contenedor-product-box {

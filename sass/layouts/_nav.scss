@@ -1,18 +1,58 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $color-header;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+
+    .line {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+    }
+}
+
 .nav-bar {
     ul {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
         li {
             a {
                 display: block;
+                text-decoration: none;
                 color: $color-hover;
                 font-size: 20px;
                 padding: 10px 25px;
                 border-radius: 50px;
                 @include transition;
                 margin: 0 5px;
+
                 &:hover,
                 &.active {
                     color: $color-header;
@@ -32,19 +72,25 @@
         background-color: $color-header;
         @include transition;
         overflow: hidden;
+
         &.active {
             height: 450px;
+
             ul {
                 opacity: 1;
             }
         }
+
         ul {
-            display: block;
-            width: fit-content;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             margin: 80px auto 0 auto;
             text-align: center;
-            @include transition(0.5s);
             opacity: 0;
+            @include transition(0.5s);
+
             li {
                 a {
                     margin-bottom: 12px;
@@ -55,16 +101,11 @@
     }
 }
 
-.nav-bar {
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-            a {
-                text-decoration: none; 
-            }
-        }
+@media (max-width: 900px) {
+    .hamburguer {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 }

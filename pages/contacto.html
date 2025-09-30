@@ -8,6 +8,9 @@
     </head>
     <body>
 <div class="background-wrapper">
+    <button class="llamada-flotante" aria-label="Llamar a Fantástica">
+    📞
+</button>
     <header>
         <div class="logo">Fantástica</div>
         <div class="hamburguer">
@@ -26,13 +29,15 @@
         </nav>
     </header>
             <div class="main-container"></div>
-    <script>
+<script>
   const hamburguer = document.querySelector(".hamburguer");
-  hamburguer.onclick = function () {
-    const navBar = document.querySelector(".nav-bar");
+  const navBar = document.querySelector(".nav-bar");
+
+  hamburguer.onclick = () => {
     navBar.classList.toggle("active");
   };
 </script>
+
         <section class="intro-contacto">
             <h2>CONTÁCTANOS</h2>
             <h3>

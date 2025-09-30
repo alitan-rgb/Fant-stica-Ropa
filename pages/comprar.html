@@ -7,6 +7,10 @@
     <title>COMPRAR</title>
 </head>
     <body>
+      <button class="carrito-flotante" aria-label="Carrito de compras">
+  🛒
+</button>
+
 <div class="background-wrapper">
         <header>
         <div class="logo">Fantástica</div>
@@ -26,10 +30,10 @@
             </nav>
         </header>
               <div class="main-container"></div>
-        <script>
+<script>
   const hamburguer = document.querySelector(".hamburguer");
-  hamburguer.onclick = function () {
-    const navBar = document.querySelector(".nav-bar");
+  const navBar = document.querySelector(".nav-bar");
+  hamburguer.onclick = () => {
     navBar.classList.toggle("active");
   };
 </script>
@@ -38,7 +42,7 @@
   <section class="producto-box">
     <h3>Vestido Largo Canelado Manga Corta</h3>
     <div class="contenedorimgcompra">
-      <img src="../images/1021011558C1002-L1_720x.webp" alt="Vestido largo" />
+      <img src="../images/vestidolargocanelado.webp" alt="Vestido largo" />
     </div>
     <form action="/submit" method="post">
       <label for="talle1">Talle:</label>
@@ -49,12 +53,10 @@
         <option value="">L</option>
         <option value="">XL</option>
       </select>
-
       <label for="color1">Color:</label>
       <select name="color" id="color1">
         <option value="">Negro</option>
       </select>
-
       <input type="submit" value="COMPRAR" />
     </form>
   </section>
@@ -72,19 +74,62 @@
         <option value="">L</option>
         <option value="">XL</option>
       </select>
-
       <label for="color2">Color:</label>
       <select name="color" id="color2">
         <option value="">Negro</option>
         <option value="">Blanco</option>
         <option value="">Azul Marino</option>
       </select>
-
       <input type="submit" value="COMPRAR" />
     </form>
   </section>
 </div>
-
+<div class="contenedor-product-box">
+  <section class="producto-box">
+    <h3>Remera Lisa Negra Unisex</h3>
+    <div class="contenedorimgcompra">
+      <img src="../images/remeralisanegra.webp" alt="Vestido largo" />
+    </div>
+    <form action="/submit" method="post">
+      <label for="talle1">Talle:</label>
+      <select name="talle" id="talle1">
+        <option value="">XS</option>
+        <option value="">S</option>
+        <option value="">M</option>
+        <option value="">L</option>
+        <option value="">XL</option>
+        <option value="">XXL</option>
+      </select>
+      <label for="color1">Color:</label>
+      <select name="color" id="color1">
+        <option value="">Negro</option>
+      </select>
+      <input type="submit" value="COMPRAR" />
+    </form>
+  </section>
+  <section class="producto-box">
+    <h3>Remera Lisa Blanca Unisex</h3>
+    <div class="contenedorimgcompra">
+      <img src="../images/remeralisablanca.webp" alt="Vestido informal" />
+    </div>
+    <form action="/submit" method="post">
+      <label for="talle2">Talle:</label>
+      <select name="talle" id="talle2">
+        <option value="">XS</option>
+        <option value="">S</option>
+        <option value="">M</option>
+        <option value="">L</option>
+        <option value="">XL</option>
+        <option value="">XXL</option>
+      </select>
+      <label for="color2">Color:</label>
+      <select name="color" id="color2">
+        <option value="">Blanco</option>
+      </select>
+      <input type="submit" value="COMPRAR" />
+    </form>
+  </section>
+</div>
 </body>
 <footer class="footer">
     <h4>© 2025 Fantastica moda</h4>

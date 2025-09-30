@@ -28,11 +28,13 @@
               <div class="main-container"></div>
 <script>
   const hamburguer = document.querySelector(".hamburguer");
-  hamburguer.onclick = function () {
-    const navBar = document.querySelector(".nav-bar");
+  const navBar = document.querySelector(".nav-bar");
+
+  hamburguer.onclick = () => {
     navBar.classList.toggle("active");
   };
 </script>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
